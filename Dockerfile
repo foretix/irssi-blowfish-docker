@@ -27,7 +27,7 @@ RUN git clone https://github.com/falsovsky/FiSH-irssi.git \
 	&& cd FiSH-irssi \
 	&& cmake . \
 	&& make \
-	&& make install
+	&& make install \
 	&& echo "load fish" >> /home/username/.irssi/startup
 
 WORKDIR $HOME
