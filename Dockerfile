@@ -1,15 +1,10 @@
 FROM debian:stretch-slim
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-		ca-certificates \
-		libdatetime-perl \
-		libwww-perl \
-		perl \
-		wget \
     build-essential \
-    irssi-dev \
-    libglib2.0-dev \
-    libssl-dev \
+    irssi-1.2.0 \
+    libglib2.0 \
+    libssl \
     cmake \
     git \
 	&& rm -rf /var/lib/apt/lists/*
