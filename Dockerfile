@@ -1,12 +1,13 @@
 FROM debian:stretch-slim
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    irssi-dev \
-    libglib2.0-dev \
-    libssl-dev \
-    cmake \
-    git \
+	ca-certificates \
+	build-essential \
+	irssi-dev \
+	libglib2.0-dev \
+	libssl-dev \
+	cmake \
+	git \
 	&& rm -rf /var/lib/apt/lists/*
 
 ENV HOME /home/user
