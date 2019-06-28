@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	libncurses-dev \
 	libwww-perl \
 	pkg-config \
+	automake \
+	dh-autoreconf \
 	cmake \
 	git \
 	&& rm -rf /var/lib/apt/lists/*
