@@ -6,12 +6,12 @@ Blowfish support is integrated using the work of https://github.com/falsovsky/Fi
 
 # Install
 
-Download docker image https://cloud.docker.com/u/foretix/repository/docker/foretix/irssi-blowfish-2019
+`docker pull foretix/irssi-blowfish-2019:latest`
 
 # Run
 
 `docker run -v /yourfolder:/home/user/.irssi irssi-blowfish-2019`
 
-# IRC options
+# IRC commands for Blowfish
 
 See readme at https://github.com/falsovsky/FiSH-irssi
