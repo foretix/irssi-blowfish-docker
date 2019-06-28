@@ -35,10 +35,9 @@ RUN git clone https://github.com/falsovsky/FiSH-irssi.git \
 	&& cmake . \
 	&& make \
 	&& make install
+	
+RUN git clone https://github.com/foretix/irssi-blowfish-2019.git
 
-RUN printf "#!/bin/sh\nload fish\n./irssi" > $HOME/irssi_startup.sh \
-	&& chmod +x $HOME/irssi_startup.sh
+WORKDIR /irssi-blowfish-2019
 
-WORKDIR $HOME
-
-ENTRYPOINT ["irssi_startup.sh"]
+CMD ["irssi_startup.sh"]
