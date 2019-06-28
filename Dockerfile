@@ -17,7 +17,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ENV HOME /home/user
 RUN useradd --create-home --home-dir $HOME user \
 	&& mkdir -p $HOME/.irssi \
-	&& mkdir -p $HOME/.irssi/startup \
 	&& chown -R user:user $HOME
 
 ENV LANG C.UTF-8
