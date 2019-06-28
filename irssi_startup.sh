@@ -1,6 +1,4 @@
 #!/bin/sh
-
-cd /user/home/.irssi
-echo "load fish" >> /user/home/.irssi/startup
+echo "load fish" >> /home/user/.irssi/startup
 cd /usr/local/bin
 ./irssi
