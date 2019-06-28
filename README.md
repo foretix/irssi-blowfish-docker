@@ -11,3 +11,7 @@ Download docker image https://cloud.docker.com/u/foretix/repository/docker/foret
 # Run
 
 `docker run -v /yourfolder:/home/user/.irssi irssi-blowfish-2019`
+
+# IRC options
+
+See readme at https://github.com/falsovsky/FiSH-irssi
