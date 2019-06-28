@@ -34,9 +34,11 @@ RUN git clone https://github.com/falsovsky/FiSH-irssi.git \
 	&& cd /FiSH-irssi \
 	&& cmake . \
 	&& make \
-	&& make install \
-	&& echo "load /usr/local/lib/irssi/modules/libfish.so" >> $HOME/.irssi/startup
+	&& make install
+
+RUN printf "#!/bin/sh\nload fish\n./irssi" > $HOME/irssi_startup.sh \
+	&& chmod +x $HOME/irssi_startup.sh
 
 WORKDIR $HOME
 
-CMD ["irssi"]
+ENTRYPOINT ["irssi_startup.sh"]
