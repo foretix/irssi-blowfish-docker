@@ -2,7 +2,7 @@ FROM debian:stretch-slim
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
-    irssi-1.2.0 \
+    irssi \
     libglib2.0 \
     libssl \
     cmake \
