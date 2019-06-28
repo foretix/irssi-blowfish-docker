@@ -3,9 +3,12 @@ FROM debian:stretch-slim
 RUN apt-get update && apt-get install -y --no-install-recommends \
 	ca-certificates \
 	build-essential \
-	irssi-dev=1.2.0-2 \
 	libglib2.0-dev \
 	libssl-dev \
+	libdatetime-perl \
+	libncurses-dev \
+	libwww-perl \
+	pkg-config \
 	cmake \
 	git \
 	&& rm -rf /var/lib/apt/lists/*
@@ -18,8 +21,15 @@ RUN useradd --create-home --home-dir $HOME user \
 ENV LANG C.UTF-8
 ENV IRSSI_VERSION 1.2.0
 
+RUN git clone https://github.com/irssi/irssi \
+	&& cd /irssi \
+	&& git checkout tags/$IRSSI_VERSION \
+	&& ./autogen.sh \
+	&& make \
+	&& make install
+
 RUN git clone https://github.com/falsovsky/FiSH-irssi.git \
-	&& cd FiSH-irssi \
+	&& cd /FiSH-irssi \
 	&& cmake . \
 	&& make \
 	&& make install \
