@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ENV HOME /home/user
 RUN useradd --create-home --home-dir $HOME user \
 	&& mkdir -p $HOME/.irssi \
+	&& mkdir -p $HOME/.irssi/startup \
 	&& chown -R user:user $HOME
 
 ENV LANG C.UTF-8
@@ -28,7 +29,7 @@ RUN git clone https://github.com/falsovsky/FiSH-irssi.git \
 	&& cmake . \
 	&& make \
 	&& make install \
-	&& echo "load fish" >> /home/username/.irssi/startup
+	&& echo "load fish" >> $HOME/.irssi/startup
 
 WORKDIR $HOME
 
