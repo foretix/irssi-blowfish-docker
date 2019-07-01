@@ -12,6 +12,8 @@ Blowfish support is integrated using the work of https://github.com/falsovsky/Fi
 
 `docker run -v /yourfolder:/home/user/.irssi irssi-blowfish-2019`
 
+Note: `/load fish` command is executed immediately on start, so there is no need to load fish extension manually.
+
 # IRC commands for Blowfish
 
 See readme at https://github.com/falsovsky/FiSH-irssi
