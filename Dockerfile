@@ -22,6 +22,7 @@ RUN useradd --create-home --home-dir $HOME user \
 
 ENV LANG C.UTF-8
 ENV IRSSI_VERSION 1.2.0
+ENV FISH_VERSION 1.6
 
 RUN git clone https://github.com/irssi/irssi \
 	&& cd /irssi \
@@ -32,6 +33,7 @@ RUN git clone https://github.com/irssi/irssi \
 
 RUN git clone https://github.com/falsovsky/FiSH-irssi.git \
 	&& cd /FiSH-irssi \
+	&& git checkout tags/$FISH_VERSION \
 	&& cmake . \
 	&& make \
 	&& make install
