@@ -6,11 +6,11 @@ Blowfish support is integrated using the work of https://github.com/falsovsky/Fi
 
 # Install
 
-`docker pull foretix/irssi-blowfish-2019:latest`
+`docker pull foretix/irssi-blowfish-docker:latest`
 
 # Run
 
-`docker run -v /yourfolder:/home/user/.irssi irssi-blowfish-2019`
+`docker run -v /yourfolder:/home/user/.irssi irssi-blowfish-docker`
 
 Note: `/load fish` command is executed immediately on start, so there is no need to load fish extension manually.
 
