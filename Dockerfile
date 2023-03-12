@@ -21,7 +21,7 @@ RUN useradd --create-home --home-dir $HOME user \
 	&& chown -R user:user $HOME
 
 ENV LANG C.UTF-8
-ENV IRSSI_VERSION 1.2.2
+ENV IRSSI_VERSION 1.4.3
 ENV FISH_VERSION 1.6
 
 RUN git clone https://github.com/irssi/irssi \
